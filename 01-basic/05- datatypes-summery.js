@@ -20,8 +20,8 @@
 
 // console.log(id === anotherId); // false
 
- const bigint = 34567890123n;
- console.log(typeof bigint, bigint);
+ //const bigint = 34567890123n;
+ //console.log(typeof bigint, bigint);
 
 // Reference Data Types or non-primitive
 // 1. object
@@ -42,3 +42,25 @@ const func = function()  {
 }; // function
 
 console.log(typeof func, func)
+
+//************ Memories ******** */
+
+// 1. Stack (Primitive) //copy
+// 2. Heap (Non-Primitive) //reference
+
+let myname = "Upendra Tiwari";
+
+let anothername = myname; // anothername = myname;
+anothername = "Nilam Tiwari";
+console.log(myname, anothername);
+
+let user = {
+    name: "Upendra",
+    age: 25,
+    email: "X6fUz@example.com"
+}
+
+let anotherUser = user;
+anotherUser.name = "Nilam";
+console.log(user, anotherUser);
+
