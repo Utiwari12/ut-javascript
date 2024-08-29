@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node List</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 +1);
+
+    div.setAttribute("title", "generated title");
+    div.style.backgroundColor = "red";
+    div.style.padding = "10px";
+    //div.innerText = "UT Academy";
+    const addText = document.createTextNode("UT Academy");
+    div.appendChild(addText);
+    // the above code will stored in the memory and look in console only
+    // the use of below code will display the text in the browser
+    document.body.appendChild(div);
+
+</script>
+</html>
