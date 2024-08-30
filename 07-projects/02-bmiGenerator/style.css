@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+#weight-guide{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
