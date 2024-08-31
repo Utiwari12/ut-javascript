@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous Events</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Upendra Tiwari');
+    // }, 2000);
+
+     //The above code can be also written as below and executed after 2 seconds or 2000 miliseconds
+    const sayUpendra = function(){
+        console.log('Upendra Tiwari');
+    }
+    setTimeout(sayUpendra, 2000);
+    
+
+    // to change the name of h1 tag
+   // document.querySelector('h1').innerHTML = 'Upendra Tiwari';
+
+   const changeText = function(){
+        document.querySelector('h1').innerHTML = 'JavaScript Series';
+    }
+    const changeMe = setTimeout(changeText, 2000);
+    //clearTimeout(changeMe)
+
+    document.querySelector('#stop')
+    .addEventListener('click', function(){
+        console.log('stop clicked');
+        clearTimeout(changeMe)
+    })
+
+
+</script>
+</html>
