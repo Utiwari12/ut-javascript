@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //SetInterval
+    // setInterval(function(){
+    //     console.log('Upendra Tiwari', Date.now());
+    // }, 1000); // 1000 miliseconds = 1 second
+
+    //The above code can be also written as below
+
+    const sayDate = function(str){
+        console.log( str,'Upendra Tiwari', Date.now());
+    }
+    //const intervalId = setInterval(sayDate, 1000, "hi");
+    //clearInterval(intervalId);
+
+    
+
+    let intervalId = null;
+
+document.querySelector('#start')
+.addEventListener('click', function(){
+    if (!intervalId) {
+        intervalId = setInterval(sayDate, 1000, "hi");
+    }
+    console.log('start clicked');
+})
+
+document.querySelector('#stop')
+.addEventListener('click', function(){
+    if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+    console.log('stop clicked');
+})
+
+    
+
+
+    
+</script>
+</html>
