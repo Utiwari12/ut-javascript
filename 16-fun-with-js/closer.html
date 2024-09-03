@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closer in JavaScript</title>
+  </head>
+  <body style="background-color: #212121; color: #fff;">
+    <h1>Closer in JavaScript</h1>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    // function makeFunc() {
+    //   let name = "Mozilla"; // name is a local variable created by init
+    //   function displayName() {
+    //     // displayName() is the inner function, that forms a closure
+    //     console.log(name); // use variable declared in the parent function
+    //   }
+    //   return displayName;
+    //   displayName();
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+    
+
+    // function outer() {
+    //   let username = "Upendra"; // name is a local variable created by outer
+    //    console.log("Too Outer", username);
+    //    //console.log(secret);
+    //   function inner() {
+    //     let secret = "password_my123";
+    //     console.log("Too Inner",username);
+    //   }
+    //   function inner2() {
+    //     console.log("Too Inner2",username);
+    //     console.log("Too Inner2",secret);
+    //   }
+
+    //   inner();
+    //   inner2();
+    // }
+
+    // outer();
+    //console.log("Too Outer", username);
+  </script>
+  <script>
+
+    //  document.getElementById("orange").onclick = function () {
+    //      document.body.style.backgroundColor = "orange";
+    //  }
+
+    //  document.getElementById("green").onclick = function () {
+    //      document.body.style.backgroundColor = "green";
+    //  }
+
+     function clickHandler(color) {
+        //document.body.style.backgroundColor = `${color}`
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+     }
+
+     document.getElementById("orange").onclick = clickHandler("orange");
+     document.getElementById("green").onclick = clickHandler("green");
+
+  </script>
+</html>
